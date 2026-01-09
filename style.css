@@ -1,0 +1,214 @@
+/* DONE STYLING ENTIRELY ON CHATGPT 
+
+/* =========================
+   THEME VARIABLES (DARK)
+   ========================= */
+:root {
+  --bg-page: radial-gradient(circle at top, #1f2933, #0f172a);
+  --bg-card: #020617;
+  --border: #1e293b;
+
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --text-placeholder: #64748b;
+
+  --accent: #22c55e;
+  --accent-dark: #16a34a;
+
+  --warn: #fbbf24;
+  --danger: #f87171;
+}
+
+/* =========================
+   RESET
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-page);
+  color: var(--text-main);
+}
+
+/* =========================
+   APP CARD
+   ========================= */
+.app {
+  width: 340px;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   TITLE
+   ========================= */
+.app h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-main);
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--text-placeholder);
+}
+
+.input {
+  margin-bottom: 8px;
+}
+
+.search {
+  margin-bottom: 12px;
+}
+
+/* =========================
+   BUTTONS (BASE)
+   ========================= */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* ADD */
+.add {
+  width: 100%;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #022c22;
+}
+
+.add:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   FILTERS
+   ========================= */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.filter {
+  flex: 1;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
+.filter.active {
+  background: var(--accent);
+  color: #022c22;
+  border-color: var(--accent);
+}
+
+/* =========================
+   COUNTER
+   ========================= */
+.count {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   ACTION BUTTONS
+   ========================= */
+.actions {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.clear-done {
+  flex: 1;
+  background: var(--bg-card);
+  color: var(--warn);
+  border: 1px solid var(--border);
+}
+
+.clear-all {
+  flex: 1;
+  background: var(--bg-card);
+  color: var(--danger);
+  border: 1px solid var(--border);
+}
+
+.clear-done:hover {
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.clear-all:hover {
+  background: rgba(248, 113, 113, 0.1);
+}
+
+/* =========================
+   NOTES LIST
+   ========================= */
+ul {
+  list-style: none;
+}
+
+/* NOTE ITEM */
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* CHECKBOX */
+li input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+/* NOTE TEXT */
+li span {
+    flex: 1;
+    white-space: normal;
+}
+
+/* DONE */
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

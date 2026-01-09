@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app">
+        <h2>Notes</h2>
+        <input type="text" class="search" placeholder="search notes">
+        <input class="input" placeholder="enter">
+        <button class="add">Add</button>
+        
+        <div class="filters">
+            <button class="filter" data-filter="all">All</button>
+            <button class="filter" data-filter="active">Active</button>
+            <button class="filter" data-filter="done">Done</button>
+        </div>
+        <p class="count"></p>
+        
+        
+        <div class="actions">
+            <button class="clear-done">Clear Done</button>
+            <button class="clear-all">Clear All</button>
+        </div>
+
+        <ul class="list"></ul>
+    </div>
+
+    <script src="/mobileV2.js"></script>
+</body>
+</html>
